@@ -28,7 +28,7 @@ body {
   min-width: 800px;
   border: 5px solid black;
   border-radius: 10px;
-  background: black;
+  background-color: black;
   position: relative;
   cursor: pointer;
 }
@@ -55,7 +55,7 @@ video {
   width: 100%;
   height: 95px;
   margin-top: -95px;
-  background: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
   z-index: 5;
   display: flex;
@@ -63,11 +63,11 @@ video {
   opacity: 0;
   transition: all 0.5s ease-out 2s;
 }
-.show-controls:hover .controls-container{
+
+.show-controls:hover .controls-container {
   opacity: 1;
   transition: all 0.2s ease-out;
 }
-
 
 .control-group {
   width: 100%;
@@ -97,12 +97,12 @@ video {
   top: 15px;
   cursor: pointer;
   transition: height 0.1s ease-in-out;
+  z-index: 10;
 }
-.progress-range:hover{
+
+.progress-range:hover {
   height: 10px;
 }
-
-
 
 .progress-bar {
   background: var(--primary-color);
@@ -174,14 +174,15 @@ video {
 .speed {
   margin-right: 15px;
 }
+
 select,
-option{
+option {
   cursor: pointer;
 }
 
-
 select {
-  background: transparent;
+  appearance: none;
+  background-color: transparent;
   color: var(--font-color);
   border: none;
   font-size: 18px;
@@ -189,13 +190,13 @@ select {
   top: -2.5px;
   border-radius: 5px;
 }
-select:focus{
+
+select:focus {
   outline: none;
 }
 
-
 select > option {
-  background: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);
   border: none;
   font-size: 14px;
 }
@@ -221,9 +222,9 @@ select > option {
 
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 600px) {
-  .player{
+  .player {
     min-width: 0;
-    max-width: 95%;
+    max-width: 95vw;
   }
 
   .fas {
